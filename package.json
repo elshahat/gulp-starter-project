@@ -1,0 +1,71 @@
+{
+  "name": "gulp-starter-project",
+  "version": "1.0.0",
+  "description": "Gulp Starter Project",
+  "main": "gulpfile.js",
+  "scripts": {
+    "gulp": "gulp --production",
+    "gulpRTL": "gulp --production --dir=rtl",
+    "gulpDev": "gulp --development",
+    "gulpDevRTL": "gulp --development --dir=rtl",
+    "buildStyles": "gulp buildStyles",
+    "buildStylesRTL": "gulp buildStyles --dir=rtl",
+    "buildJS": "gulp buildJS",
+    "buildKitFiles": "gulp buildKitFiles",
+    "copyFonts": "gulp copyFonts",
+    "minifyImages": "gulp minifyImages",
+    "watchStyleFiles": "gulp watchStyleFiles",
+    "watchStyleFilesRTL": "gulp watchStyleFiles --dir=rtl",
+    "watchJsFiles": "gulp watchJsFiles",
+    "watchKitFiles": "gulp watchKitFiles",
+    "watchFontsFiles": "gulp watchFontsFiles",
+    "watchImagesFiles": "gulp watchImagesFiles"
+  },
+  "keywords": [
+    "Gulp",
+    "Strater Kit",
+    "Starter Project",
+    "Front-End"
+  ],
+  "author": {
+    "name": "Ahmed ElShahat",
+    "email": "ahmed@elshahat.com",
+    "url": "https://www.elshahat.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.3.4",
+    "@babel/preset-env": "^7.3.4",
+    "browser-sync": "^2.26.3",
+    "gulp": "^4.0.0",
+    "gulp-autoprefixer": "^7.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-if": "^3.0.0",
+    "gulp-imagemin": "^6.1.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-kit": "^0.3.0",
+    "gulp-mode": "^1.0.2",
+    "gulp-notify": "^3.2.0",
+    "gulp-plumber": "^1.2.1",
+    "gulp-pretty-html": "^2.0.10",
+    "gulp-rename": "^1.4.0",
+    "gulp-rtlcss": "^1.4.0",
+    "gulp-sass": "^4.0.2",
+    "gulp-sass-lint": "^1.4.0",
+    "gulp-sourcemaps": "^2.6.5",
+    "gulp-uglify": "^3.0.2",
+    "gulp-util": "^3.0.8",
+    "jshint": "^2.10.2",
+    "jshint-stylish": "^2.2.1"
+  },
+  "dependencies": {},
+  "browserslist": [
+    "last 15 versions",
+    "> 1%",
+    "ie 8",
+    "ie 7",
+    "Firefox ESR"
+  ]
+}
