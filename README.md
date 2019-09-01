@@ -31,7 +31,7 @@ To run the project for the first time, execute the following command in your ter
 
 ***
 
-#### The list of commands to use with your project:
+### The list of commands to use with your project:
 * **`gulp`**: _Get a production version of the project._
 * **`gulpRTL`**: _Get a production version of the project with RTL support._
 * **`gulpDev`**: _Run the development server with sourcemaps files._
