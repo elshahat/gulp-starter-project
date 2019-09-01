@@ -1,2 +1,4 @@
 /node_modules
+/publicDev
+/public
 package-lock.json
