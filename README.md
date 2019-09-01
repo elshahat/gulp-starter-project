@@ -2,7 +2,7 @@
 This gulp starter project will help you to start developing your own projects fast, easy and with less project structuring confusions.
 
 ### Running the project for the first time
-To run the project for the first time, execute the following command in your terminal while you are in the root directory of the project folder: `npm install`
+To run the project for the first time, execute the following command in your terminal while you are in the root directory of the project folder: **`npm install`**
 
 ### The list of features included in this starter project are as follows:
 * **Compiling SCSS files into CSS:** You will have the option to output sourcemap file in development mode and also output minified production version. There is also an option to output a RTL version and with sourcemap file from the compiled CSS file in development mode. You will also have a detailed info if there are errors to fix them or enhancements needed to be done in your SCSS files.
