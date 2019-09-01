@@ -295,7 +295,7 @@ function plumbError() {
 */
 const parallelCommands = isProduction ?
     parallel(buildStyles, buildJS, buildKitFiles, minifyImages, copyFonts) :
-    parallel(browserSyncFn, watchStyleFiles, watchJsFiles, watchKitFiles, minifyImages, copyFonts);
+    parallel(browserSyncFn, watchStyleFiles, watchJsFiles, watchKitFiles, watchImagesFiles, watchFontsFiles);
 exports.default = parallelCommands;
 
 /*
