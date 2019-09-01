@@ -72,9 +72,9 @@ const paths = {
     stylesBuild: folder + '/assets/css/', // SASS build directory
     kit: 'src/kit/**/*.kit', // KIT files source
     kitBuild: folder + '/', // KIT build directory
-    fonts: 'src/fonts/**/*', // Fonts files source
+    fonts: ['src/fonts/**/*', '!src/fonts/**/.gitkeep'], // Fonts files source
     fontsPublic: folder + '/assets/fonts/', // Fonts destination directory
-    images: 'src/images/**/*', // Images files source
+    images: ['src/images/**/*', '!src/images/**/.gitkeep'], // Images files source
     imagesPublic: folder + '/assets/images/', // Images destination directory
 };
 
