@@ -32,19 +32,19 @@ To run the project for the first time, execute the following command in your ter
 ***
 
 #### The list of commands to use with your project:
-* **gulp:** _Get a production version of the project._
-* **gulpRTL:** _Get a production version of the project with RTL support._
-* **gulpDev:** _Run the development server with sourcemaps files._
-* **gulpDevRTL:** _Run the development server with sourcemaps files and with RTL support._
-* **buildStyles:** _Run the SCSS compilation process._
-* **buildStylesRTL:** _Run the SCSS compilation process with RTL support._
-* **buildJS:** _Run the JS combination and minification process._
-* **buildKitFiles:** _Run the Kit files compilation process._
-* **copyFonts:** _Copy the fonts from the src to the development or production folders._
-* **minifyImages:** _Run the images minification process and copy them from the src to the development or production folders._
-* **watchStyleFiles:** _Run the SCSS watch command to watch any files changes and compile them._
-* **watchStyleFilesRTL:** _Run the SCSS watch command to watch any files changes and compile them with RTL support._
-* **watchJsFiles:** _Run the JS watch command to watch any files changes and combine and minify them._
-* **watchKitFiles:** _Run the kit files watch command to watch any files changes and compile them._
-* **watchFontsFiles:** _Run the copy fonts watch command to copy them from the src to the development or production folders._
-* **watchImagesFiles:** _Run the minify images watch command to minify images and copy them from the src to the development or production folders._
+* **`gulp`**: _Get a production version of the project._
+* **`gulpRTL`**: _Get a production version of the project with RTL support._
+* **`gulpDev`**: _Run the development server with sourcemaps files._
+* **`gulpDevRTL`**: _Run the development server with sourcemaps files and with RTL support._
+* **`buildStyles`**: _Run the SCSS compilation process._
+* **`buildStylesRTL`**: _Run the SCSS compilation process with RTL support._
+* **`buildJS`**: _Run the JS combination and minification process._
+* **`buildKitFiles`**: _Run the Kit files compilation process._
+* **`copyFonts`**: _Copy the fonts from the src to the development or production folders._
+* **`minifyImages`**: _Run the images minification process and copy them from the src to the development or production folders._
+* **`watchStyleFiles`**: _Run the SCSS watch command to watch any files changes and compile them._
+* **`watchStyleFilesRTL`**: _Run the SCSS watch command to watch any files changes and compile them with RTL support._
+* **`watchJsFiles`**: _Run the JS watch command to watch any files changes and combine and minify them._
+* **`watchKitFiles`**: _Run the kit files watch command to watch any files changes and compile them._
+* **`watchFontsFiles`**: _Run the copy fonts watch command to copy them from the src to the development or production folders._
+* **`watchImagesFiles`**: _Run the minify images watch command to minify images and copy them from the src to the development or production folders._
