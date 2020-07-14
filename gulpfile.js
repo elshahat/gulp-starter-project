@@ -113,7 +113,6 @@ function buildStyles() {
         .pipe(mode.development(sourcemaps.init()))
         .pipe(sass(sassOptions))
         .pipe(autoPrefixer())
-        .pipe(mode.development(sourcemaps.write('/')))
         .pipe(dest(paths.stylesBuild)) // Output LTR stylesheets.
         .pipe(isRTL ? gulpIf('*.css', rtlCSS()) : gUtil.noop()) // Convert to RTL.
         .pipe(isRTL ? gulpIf('*.css', rename({ suffix: rtlCSSOptions.suffix })) : gUtil.noop()) // Append suffix to the filename.
@@ -159,6 +158,16 @@ function copyFonts() {
             "message": "Fonts copied to the assets public folder!",
             "onLast": true
         }));
+}
+
+// Copy images from the src folder to the assets public folder
+function copyImages() {
+   return src(paths.images)
+       .pipe(dest(paths.imagesPublic))
+       .pipe(notify({
+          "message": "Images copied to the assets public folder!",
+          "onLast": true
+       }));
 }
 
 // Minify images in the src folder and copy the minified images to the assets public folder
@@ -266,6 +275,18 @@ function watchImagesFiles() {
     );
 }
 
+// Watch images files changes, copy them to the assets public folder
+function watchCopyImagesFiles() {
+   watch(
+       paths.images,
+       {
+          events: 'all',
+          ignoreInitial: false
+       },
+       series(copyImages)
+   );
+}
+
 // Global Error Handler
 function plumbError() {
     return plumber({
@@ -295,7 +316,7 @@ function plumbError() {
 */
 const parallelCommands = isProduction ?
     parallel(buildStyles, buildJS, buildKitFiles, minifyImages, copyFonts) :
-    parallel(browserSyncFn, watchStyleFiles, watchJsFiles, watchKitFiles, watchImagesFiles, watchFontsFiles);
+    parallel(browserSyncFn, watchStyleFiles, watchJsFiles, watchKitFiles, watchCopyImagesFiles, watchFontsFiles);
 exports.default = parallelCommands;
 
 /*
@@ -305,23 +326,27 @@ exports.default = parallelCommands;
     3. Build Kit files: gulp buildKitFiles
     4. Minify Images: gulp minifyImages
     5. Copy Fonts files: gulp copyFonts
+    6. Copy Images files: gulp copyImages
 */
 exports.buildStyles = buildStyles;
 exports.buildJS = buildJS;
 exports.buildKitFiles = buildKitFiles;
 exports.minifyImages = minifyImages;
 exports.copyFonts = copyFonts;
+exports.copyImages = copyImages;
 
 /*
     Watch commands with gulp
     1. Watch SASS files: gulp watchStyleFiles
     2. Watch JS files: gulp watchJsFiles
     3. Watch Kit files: gulp watchKitFiles
-    4. Watch Images files: gulp watchImagesFiles
+    4. Watch Minify Images files: gulp watchImagesFiles
     5. Watch Fonts files: gulp watchFontsFiles
+    6. Watch Copy Images files: gulp watchCopyImagesFiles
 */
 exports.watchStyleFiles = watchStyleFiles;
 exports.watchJsFiles = watchJsFiles;
 exports.watchKitFiles = watchKitFiles;
 exports.watchImagesFiles = watchImagesFiles;
 exports.watchFontsFiles = watchFontsFiles;
+exports.watchCopyImagesFiles = watchCopyImagesFiles;
